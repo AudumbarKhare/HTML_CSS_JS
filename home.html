@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Topbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="left">
+      <div class="logo">Your Logo</div>
+      <div class="menu">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-book"></i> Book Table</a>
+        <a href="#"><i class="fas fa-utensils"></i> Food Menu</a>
+        <a href="#"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#"><i class="fas fa-phone"></i> Contact</a>
+      </div>
+    </div>
+    <div class="center">
+      <input type="text" placeholder="Search...">
+      <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+    </div>
+    <div class="right">
+      <div class="user-login"><i class="fas fa-sign-in"></i></div>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars menuOpen"></i>
+        <i class="fas fa-times menuClose"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-content">
+      <a href="#"><i class="fas fa-home"></i> Home</a>
+      <a href="#"><i class="fas fa-book"></i> Book Table</a>
+      <a href="#"><i class="fas fa-utensils"></i> Food Menu</a>
+      <a href="#"><i class="fas fa-info-circle"></i> About</a>
+      <a href="#"><i class="fas fa-phone"></i> Contact</a>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="banner-text">
+      <h1>Enjoy <span> Delicious Food </span>in Your Healthy Life</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum iure quaerat iste doloribus amet Rerum
+        recusandae ullam amet sit consequuntur, error aspernatur quasi cupiditate ab a veniam ipsum quisquam quod.</p>
+      <button>Visit Now</button>
+    </div>
+    <div class="banner-image">
+      <!-- <img src="food.jpg" alt="Plate of delicious food"> -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

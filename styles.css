@@ -1,0 +1,233 @@
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Topbar styles */
+.topbar {
+  /* width: 100vw; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 20px rgb(255, 255, 255);
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.center {
+  flex-grow: 0.5;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 58px;
+  left: 0;
+  width: 100%;
+  /*height: 100%; */
+  background-color: #333;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: all 2ms;
+}
+
+.menu-content {
+  width: 100%;
+  background-color: #333;
+  padding: 20px;
+}
+
+.menu-content a {
+  text-align: center;
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.menuClose {
+  /* position: absolute; */
+  display: none;
+  /* cursor: pointer; */
+}
+
+.menuOpen {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-overlay {
+  display: none;
+}
+
+/* Banner */
+.banner {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-image: url("./image/food_image01.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner-text {
+  flex: 1;
+  padding: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.banner-text h1 span {
+  color: rgb(253, 57, 8);
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+/* .banner-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+} */
+
+.banner-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  box-shadow: 0 2px 20px rgb(0, 0, 0);
+}
+
+.banner-text button {
+  background-color: #e04f1e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 20px rgb(0, 0, 0);
+}
+
+.banner-image {
+  flex: 1;
+}
+
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-overlay {
+    display: none;
+  }
+
+  .menu-icon {
+    padding: 10px;
+    display: block;
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .right {
+    flex-direction: row-reverse;
+  }
+
+  .center {
+    display: none;
+  }
+
+  /* banner */
+  .banner {
+    height: 300px;
+  }
+
+  .banner .banner-text{
+    flex: 2;
+    padding: 10px;
+  }
+
+  .banner-image {
+    flex: 0;
+  }
+
+  .banner .banner-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-text h1 span {
+    text-underline-offset: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .center {
+    display: none;
+  }
+}
+
+/* Styles for desktops (992px to 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .menu-overlay {
+    display: none;
+  }
+}
+
+/* Styles for large desktops (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .menu-overlay {
+    display: none;
+  }
+}
