@@ -38,7 +38,46 @@ body {
   margin-right: 10px;
 }
 
-.center {
+.search-box {
+  flex-grow: 0.5;
+  background-color: #f6f6fe; 
+  display: flex; 
+  align-items: center; 
+  height: 40px; 
+  padding: 0 1rem; 
+  border-radius: 25px; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+  /* width: 100%;  */
+  max-width: 500px; 
+  margin: 0 auto; 
+}
+
+.search-box input[type="text"] {
+  background-color: transparent; 
+  border: none; 
+  outline: none; 
+  font-family: Arial, sans-serif; 
+  font-size: 16px; 
+  color: black; 
+  width: calc(100% - 30px); 
+  padding-left: 1rem; 
+  padding-right: 30px; 
+}
+
+.search-box button[type="submit"] {
+  background-color: transparent; 
+  border: none; 
+  padding: 0; 
+  cursor: pointer; 
+}
+
+.search-box button[type="submit"] i {
+  font-size: 1.2rem; 
+  color: #aaa; 
+}
+
+
+/* .center {
   flex-grow: 0.5;
 }
 
@@ -56,8 +95,14 @@ input[type="text"] {
   border-radius: 5px;
   padding: 8px 15px;
   cursor: pointer;
-}
+} */
 
+.user-login{
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 50%;
+  outline: none;
+}
 .menu-overlay {
   position: fixed;
   top: 58px;
@@ -161,6 +206,85 @@ input[type="text"] {
   flex: 1;
 }
 
+/* banner end here */
+
+/* our menu strat here */
+
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.our-menu {
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.our-menu h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.food-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.food-item {
+  width: calc(33% - 1.5rem);
+  margin: 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.food-item img {
+  width: 70%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.food-item h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.food-item p {
+  font-size: .75rem;
+  padding: 0 20px;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.food-item .price {
+  font-weight: bold;
+}
+
+.menu-button {
+  display: inline-block; 
+  padding: 10px 20px; 
+  background-color: #fff; 
+  color: #e04030;
+  text-decoration: none; 
+  font-weight: bold; 
+  border: 1px solid #e04030; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-button:hover {
+  background-color: #c03020;
+  color:#fff;
+}
+
+/* our menu end here */
 
 /* For smaller screens */
 @media screen and (max-width: 768px) {
@@ -194,7 +318,7 @@ input[type="text"] {
     height: 300px;
   }
 
-  .banner .banner-text{
+  .banner .banner-text {
     flex: 2;
     padding: 10px;
   }
@@ -210,12 +334,31 @@ input[type="text"] {
   .banner-text h1 span {
     text-underline-offset: 5px;
   }
+
+  /* our menu*/
+  .food-item {
+    width: calc(70% - 1.5rem); /* Change to two columns on smaller screens */
+  }
+
+  .food-item img{
+    width: 65%;
+  }
+  /* end our menu*/
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .center {
     display: none;
   }
+
+  /* our menu*/
+  .food-item {
+    width: calc(45% - 1.5rem); /* Change to two columns on smaller screens */
+  }
+  .food-item img {
+    width: 61%;
+  }
+  /* end our menu*/
 }
 
 /* Styles for desktops (992px to 1199px) */
